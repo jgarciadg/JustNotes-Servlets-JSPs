@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+}
+
+.error-h1 {
+	font-size: 24px;
+	margin: 2% 0;
+}
+
+.error-image {
+	margin: 2% auto;
+}
+
+.error-a {
+	display: block;
+}

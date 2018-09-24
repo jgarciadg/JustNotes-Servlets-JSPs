@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* Class Green */
+#content-notes>.class-1, #content-notes-list>.class-1 {
+	background-color: #d5f5cb;
+}
+
+.class-1 h2, .class-1 p, .class-1 div {
+	color: #6ba083;
+}
+
+/* Class Blue */
+#content-notes>.class-2, #content-notes-list>.class-2 {
+	background-color: #d5eeff;
+}
+
+.class-2 h2, .class-2 p, .class-2 div {
+	color: #1b435d;
+}
+
+/* Class Pink */
+#content-notes>.class-3, #content-notes-list>.class-3 {
+	background-color: #ffe2e2;
+}
+
+.class-3 h2, .class-3 p, .class-3 div {
+	color: #cf8585;
+}
+
+/* Class Black */
+#content-notes>.class-4, #content-notes-list>.class-4 {
+	background-color: #404b69;
+}
+
+.class-4 h2, .class-4 p, .class-4 div {
+	color: #dbedf3;
+}

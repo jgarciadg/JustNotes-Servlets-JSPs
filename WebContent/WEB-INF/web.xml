@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JustNotes</display-name>
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
+    <welcome-file>/WEB-INF/jsp/register.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <security-constraint>
+  	<web-resource-collection>
+  		<web-resource-name>Entire Application</web-resource-name>
+  		<url-pattern>/*</url-pattern>
+  	</web-resource-collection>
+  	<user-data-constraint>
+  		<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+  	</user-data-constraint>
+  </security-constraint>
+  
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>es.justo.giiis.pi.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/notes/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  <filter>
+    <filter-name>NotificationFilter</filter-name>
+    <filter-class>es.justo.giiis.pi.filter.NotificationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>NotificationFilter</filter-name>
+    <url-pattern>/notes/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+  <error-page>
+    <error-code>500</error-code>
+    <location>/WEB-INF/errors/error-500.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/errors/error-403.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/errors/error-404.jsp</location>
+  </error-page>
+</web-app>
